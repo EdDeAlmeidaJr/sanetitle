@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Generates a sane string which may be used as a URL, based on a sentence."
   spec.description   = "This gem generates a sane hyfen-separated text to serve as URL address to a page, based on a given string. It is ideal to generate a URL based on a title of a blog post or article, thus the name of the gem."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/EdDeAlmeidaJr/sanetitle"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
