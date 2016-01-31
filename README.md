@@ -1,8 +1,6 @@
-# Sanetitle
+# SaneTitle
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sanetitle`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem generates a sane hyfen-separated text to serve as URL address to a page, based on a given string. It is ideal to generate a URL based on a title of a blog post or article, thus the name of the gem.
 
 ## Installation
 
@@ -14,15 +12,33 @@ gem 'sanetitle'
 
 And then execute:
 
+```bash
     $ bundle
+```
 
 Or install it yourself as:
 
+```bash
     $ gem install sanetitle
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+The usage is quite simple. 
+
+Just create a SaneTitle::Sanitize object, passing the string you want to make sane, like:
+
+```ruby
+    obj = SaneTitle::Sanifier.new("Este é um exemplo de string que será corrigida no curso da programação")
+```
+
+and then store the sane string in a variable with
+
+```ruby
+    sane_title = obj.result
+```
+
+In this particular case, the variable sane_title shall contain "este-e-um-exemplo-de-string-que-sera-corrigida-no-curso-da-programacao".
 
 ## Development
 
@@ -32,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sanetitle. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [the gem gitHub page](https://github.com/EdDeAlmeidaJr/sanetitle). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

@@ -1,11 +1,45 @@
 require 'spec_helper'
 
-describe Sanetitle do
-  it 'has a version number' do
-    expect(Sanetitle::VERSION).not_to be nil
+describe SaneTitle do
+    
+  it 'SaneTitle has a version number' do
+    expect(SaneTitle::VERSION).not_to be nil
+  end
+  
+  it 'SaneTitle::Sanifier.new should raise an ArgumentError (Invalid string) if initialization parameter title is NOT a String' do
+    expect {
+      cl = SaneTitle::Sanifier.new(2)
+    }.to raise_error(ArgumentError,'Invalid string.')
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'SaneTitle::Sanifier.new should raise an ArgumentError (Invalid string) if initialization parameter title is an empty String' do
+    expect {
+      cl = SaneTitle::Sanifier.new("")
+    }.to raise_error(ArgumentError,'Invalid string.')
+  end  
+  
+  it 'SaneTitle::Sanifier.to_lower should return the string given in lower case' do
+    cl = SaneTitle::Sanifier.new("Sanifier.to_lower")
+    res = cl.to_lower("Este é um exemplo de string que será corrigida no curso da programação")
+    expect(res).to eq("este é um exemplo de string que será corrigida no curso da programação")
   end
+  
+  it 'SaneTitle::Sanifier.spaces_to_underlines should change the spaces into hyfens' do
+    cl = SaneTitle::Sanifier.new("Sanifier.spaces_to_underlines")
+    res = cl.spaces_to_underlines("este é um exemplo de string que será corrigida no curso da programação")
+    expect(res).to eq("este-é-um-exemplo-de-string-que-será-corrigida-no-curso-da-programação")
+  end
+  
+  it 'SaneTitle::Sanifier.remove_special_chars should return the title with no special chars' do
+    cl = SaneTitle::Sanifier.new("Sanifier.spaces_to_underlines")
+    res = cl.remove_special_chars("este é um exemplo de string que será corrigida no curso da programação")
+    expect(res).to eq("este e um exemplo de string que sera corrigida no curso da programacao")        
+  end
+  
+  it 'should return a correct string when all steps are finished' do
+    cl = SaneTitle::Sanifier.new("Este é um exemplo de string que será corrigida no curso da programação")
+    res = cl.result
+    expect(res).to eq("este-e-um-exemplo-de-string-que-sera-corrigida-no-curso-da-programacao")    
+  end
+  
 end
