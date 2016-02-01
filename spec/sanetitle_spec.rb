@@ -19,27 +19,27 @@ describe SaneTitle do
   end  
   
   it 'SaneTitle::Sanifier.to_lower should return the string given in lower case' do
-    cl = SaneTitle::Sanifier.new("Sanifier.to_lower")
-    res = cl.to_lower("Este é um exemplo de string que será corrigida no curso da programação")
-    expect(res).to eq("este é um exemplo de string que será corrigida no curso da programação")
+    cl = SaneTitle::Sanifier.new(" ")
+    res = cl.to_lower("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    expect(res).to eq("este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
   end
   
   it 'SaneTitle::Sanifier.spaces_to_underlines should change the spaces into hyfens' do
-    cl = SaneTitle::Sanifier.new("Sanifier.spaces_to_underlines")
-    res = cl.spaces_to_underlines("este é um exemplo de string que será corrigida no curso da programação")
-    expect(res).to eq("este-é-um-exemplo-de-string-que-será-corrigida-no-curso-da-programação")
+    cl = SaneTitle::Sanifier.new(" ")
+    res = cl.spaces_to_underlines("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    expect(res).to eq("Este-é-um-exemplo-de-string-(teste)-*&%$-que-será-corrigida-no-curso-da-programação!")
   end
   
   it 'SaneTitle::Sanifier.remove_special_chars should return the title with no special chars' do
-    cl = SaneTitle::Sanifier.new("Sanifier.spaces_to_underlines")
-    res = cl.remove_special_chars("este é um exemplo de string que será corrigida no curso da programação")
-    expect(res).to eq("este e um exemplo de string que sera corrigida no curso da programacao")        
+    cl = SaneTitle::Sanifier.new(" ")
+    res = cl.remove_special_chars("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    expect(res).to eq("Este e um exemplo de string teste que sera corrigida no curso da programacao")        
   end
   
   it 'should return a correct string when all steps are finished' do
-    cl = SaneTitle::Sanifier.new("Este é um exemplo de string que será corrigida no curso da programação")
+    cl = SaneTitle::Sanifier.new("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
     res = cl.result
-    expect(res).to eq("este-e-um-exemplo-de-string-que-sera-corrigida-no-curso-da-programacao")    
+    expect(res).to eq("este-e-um-exemplo-de-string-teste-que-sera-corrigida-no-curso-da-programacao")    
   end
   
 end

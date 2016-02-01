@@ -8,8 +8,8 @@ module SaneTitle
       raise ArgumentError.new('Invalid string.') unless (is_string?(title) and empty_string?(title))
       step1 = title
       step2 = to_lower(step1)
-      step3 = spaces_to_underlines(step2)
-      step4 = remove_special_chars(step3)
+      step3 = remove_special_chars(step2)
+      step4 = spaces_to_underlines(step3)
       @@title_str = step4
     end
     
@@ -29,6 +29,8 @@ module SaneTitle
       s1 = s1.gsub(/[ú|ù|ũ|ü|û]/,"u")
       s1 = s1.gsub(/[ñ]/,"n")
       s1 = s1.gsub(/[ç]/,"c")
+      s1 = s1.gsub(/[\+|\=|\_|\-|\(|\)|\*|\%|\&|\$|\#|\@|\!|\?|\/|\:|\;|\.|\>|\<]/,"")
+      s1 = s1.gsub(/\ \ /," ")
     end
     
     def result
