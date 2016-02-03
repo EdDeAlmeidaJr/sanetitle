@@ -1,7 +1,5 @@
 # SaneTitle
 
-[![Gem Version](https://badge.fury.io/rb/sanetitle.svg)](https://badge.fury.io/rb/sanetitle)
-
 This gem generates a sane hyfen-separated text to serve as URL address to a page, based on a given string. It is ideal to generate a URL based on a title of a blog post or article, thus the name of the gem.
 
 ## Installation
