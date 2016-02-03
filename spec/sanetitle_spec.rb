@@ -36,10 +36,22 @@ describe SaneTitle do
     expect(res).to eq("Este e um exemplo de string teste que sera corrigida no curso da programacao")        
   end
   
-  it 'should return a correct string when all steps are finished' do
+  it 'SaneTitle::Sanifier.result should return a correct string when all steps are finished' do
     cl = SaneTitle::Sanifier.new("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
     res = cl.result
     expect(res).to eq("este-e-um-exemplo-de-string-teste-que-sera-corrigida-no-curso-da-programacao")    
+  end
+  
+  it 'SaneTitle::Sanifier.result_imp should return a string limited to lim and WITHOUT .html at the end' do
+    cl = SaneTitle::Sanifier.new("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    res = cl.result_imp(25,false)
+    expect(res).to eq("este-e-um-exemplo-de-stri")            
+  end
+
+  it 'SaneTitle::Sanifier.result_imp should return a string limited to lim and WITH .html at the end' do
+    cl = SaneTitle::Sanifier.new("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    res = cl.result_imp(25,true)
+    expect(res).to eq("este-e-um-exemplo-de-stri.html")            
   end
   
 end

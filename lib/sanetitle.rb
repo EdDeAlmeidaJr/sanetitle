@@ -36,6 +36,15 @@ module SaneTitle
     def result
       @@title_str
     end
+    
+    def result_imp(lim,html)
+      resimp = result
+      resimp = resimp[0,lim]
+      if (html)
+        resimp = resimp + '.html'
+      end
+      resimp
+    end
   
     def is_string?(title)
       title.is_a? String
