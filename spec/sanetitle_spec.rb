@@ -24,7 +24,7 @@ describe SaneTitle do
     expect(res).to eq("este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
   end
   
-  it 'SaneTitle::Sanifier.spaces_to_underlines should change the spaces into hyfens' do
+  it 'SaneTitle::Sanifier.spaces_to_underlines should change the spaces into hyphens' do
     cl = SaneTitle::Sanifier.new(" ")
     res = cl.spaces_to_underlines("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
     expect(res).to eq("Este-é-um-exemplo-de-string-(teste)-*&%$-que-será-corrigida-no-curso-da-programação!")

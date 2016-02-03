@@ -42,6 +42,33 @@ and then store the sane string in a variable with
 
 In this particular case, the variable sane_title shall contain "este-e-um-exemplo-de-string-que-sera-corrigida-no-curso-da-programacao".
 
+From release 0.2.0 on, one may also call
+
+```ruby
+    sane_title = obj.result_imp(<limit>,<html>)
+```
+
+where:
+
+<limit> is an integer value used to require that the size of the result string is limited to this size, and
+<html> is a boolean value to require (true) or not (false) that the extension .html is appended to the result.
+
+Note two important things:
+
+1) If you use
+
+```ruby
+    sane_title = obj.result_imp(20,true)
+```
+
+the result string shall have, in fact, a lenght of 25. 20 from the limit you asked, plus five, which is the size of the extension .html. If you want a total of 20 positions you should say
+
+```ruby
+    sane_title = obj.result_imp(15,true)
+```
+
+2) This gem makes no assumption about filesystems. Then, if you intend to use the filename obtained here as a name of a file to be written, **please take care of duplicates before writing yourself**. We won't accept any responsability on data loss.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
