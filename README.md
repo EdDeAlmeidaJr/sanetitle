@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/sanetitle.svg)](https://badge.fury.io/rb/sanetitle)
 [![Build status](https://travis-ci.org/EdDeAlmeidaJr/sanetitle.svg?branch=master)](https://travis-ci.org/EdDeAlmeidaJr/sanetitle.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/EdDeAlmeidaJr/sanetitle/badge.svg?branch=master)](https://coveralls.io/github/EdDeAlmeidaJr/sanetitle?branch=master)
+[![Code climate](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/badges)](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/badges)
 
 
 This gem generates a sane hyfen-separated text to serve as URL address to a page, based on a given string. It is ideal to generate a URL based on a title of a blog post or article, thus the name of the gem.
