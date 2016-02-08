@@ -68,7 +68,9 @@ the result string shall have, in fact, a lenght of 25. 20 from the limit you ask
     sane_title = obj.result_imp(15,true)
 ```
 
-2) This gem makes no assumption about filesystems. Then, if you intend to use the filename obtained here as a name of a file to be written, **please take care of duplicates before writing yourself**. We won't accept any responsability on data loss.
+## Important advice
+
+This gem makes no assumption about filesystems. Then, if you intend to use the filename obtained here as a name of a file to be written, **please take care of duplicate names before writing**. We won't accept any responsability on data loss.
 
 ## Development
 
