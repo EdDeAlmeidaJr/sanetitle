@@ -84,8 +84,15 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [the gem gitHub page](https://github.com/EdDeAlmeidaJr/sanetitle). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](https://github.com/EdDeAlmeidaJr/sanetitle/blob/master/CODE_OF_CONDUCT.md).
+If you want to contribute to this project, your help is welcome, for sure. But please, take some note before you start, so you won't tell me you didn't knew these things beforehand:
 
+01) We are here to develop some software, not to discuss politics, race, religion, gender or any other issue the 'politically correct' people like to raise to disguise their inability to make things happen.
+
+02) Opinions given by any developer outside the scope of this project are not our business. We don't care about what what you think, as long as you do NOT bring your opinions to this development space.
+
+03) You may not raise issues about things not related to this project. This includes issues related to other developer's opinions given outside here.
+
+04) Just to summarize all things said before: **Keep your personal stuff far away from this project and discuss only it in this context here**.
 
 ## License
 
