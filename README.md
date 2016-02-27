@@ -92,7 +92,7 @@ If you want to contribute to this project, your help is welcome, for sure. But p
 
 03) You may not raise issues about things not related to this project. This includes issues related to other developer's opinions given outside here.
 
-04) Just to summarize all things said before: **Keep your personal stuff far away from this project and discuss only it in this context here**.
+04) Just to summarize all things said before: **Keep your personal stuff far away from this project and discuss only the project in its context**.
 
 ## License
 
