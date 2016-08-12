@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/sanetitle.svg)](https://badge.fury.io/rb/sanetitle)
 [![Build status](https://travis-ci.org/EdDeAlmeidaJr/sanetitle.svg?branch=master)](https://travis-ci.org/EdDeAlmeidaJr/sanetitle.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/EdDeAlmeidaJr/sanetitle/badge.svg?branch=master)](https://coveralls.io/github/EdDeAlmeidaJr/sanetitle?branch=master)
 [![Code Climate](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/badges/ff71f9b0b75afbb85416/gpa.svg)](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/feed)
 [![Issue Count](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/badges/ff71f9b0b75afbb85416/issue_count.svg)](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/feed)
 
@@ -81,6 +80,10 @@ This gem makes no assumption about filesystems. Then, if you intend to use the f
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Donating
+
+Cosider supporting my work [donating](https://gratipay.com/~EdDeAlmeidaJr/) some money. This will help me to create more and more useful gems to enrich Ruby's ecosystem.
 
 ## Contributing
 
