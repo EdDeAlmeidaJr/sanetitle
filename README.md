@@ -1,6 +1,6 @@
 # SaneTitle
 
-[![Gem Version](https://badge.fury.io/rb/sanetitle.svg)](https://badge.fury.io/rb/sanetitle)
+[![GitHub version](https://badge.fury.io/gh/MIT-Licensed-gems%2Fsanetitle.svg)](https://badge.fury.io/gh/MIT-Licensed-gems%2Fsanetitle)
 [![Build status](https://travis-ci.org/EdDeAlmeidaJr/sanetitle.svg?branch=master)](https://travis-ci.org/EdDeAlmeidaJr/sanetitle.svg?branch=master)
 [![Code Climate](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/badges/ff71f9b0b75afbb85416/gpa.svg)](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/feed)
 [![Issue Count](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/badges/ff71f9b0b75afbb85416/issue_count.svg)](https://codeclimate.com/repos/56b8b4bb67fabe0fbc00274f/feed)
