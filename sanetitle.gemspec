@@ -9,6 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Edvaldo Silva de Almeida Júnior"]
   spec.email         = ["edvaldoajunior@gmail.com"]
 
+  spec.required_ruby_version = '>= 2.2.0'
+
   spec.summary       = "Generates a sane string which may be used as a URL, based on a sentence."
   spec.description   = "This gem generates a sane hyfen-separated text to serve as URL address to a page, based on a given string. It is ideal to generate a URL based on a title of a blog post or article, thus the name of the gem."
   spec.homepage      = "https://github.com/EdDeAlmeidaJr/sanetitle"
