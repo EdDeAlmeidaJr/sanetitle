@@ -37,11 +37,20 @@ module SaneTitle
       @@title_str
     end
     
-    def result_imp(lim,html)
+    def result_imp(lim,html,tstamp = false)
       resimp = result
       resimp = resimp[0,lim]
-      if (html)
+      if (html) then
         resimp = resimp + '.html'
+      end
+      if (tstamp) then
+        dt = DateTime.now.to_s 
+        dt.gsub!('T','-')
+        dt.gsub!(':','-')
+        arry = dt.split('-')
+        arry.pop(5)
+        dt = arry.join('-')
+        resimp = dt + '-' + resimp
       end
       resimp
     end

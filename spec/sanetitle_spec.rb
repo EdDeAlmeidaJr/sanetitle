@@ -53,5 +53,17 @@ describe SaneTitle do
     res = cl.result_imp(25,true)
     expect(res).to eq("este-e-um-exemplo-de-stri.html")            
   end
+
+  it 'SaneTitle::Sanifier.result_imp should return a string limited to lim and WITHOUT .html at the end and prepended with timestamp' do
+    cl = SaneTitle::Sanifier.new("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    res = cl.result_imp(25,false,true)
+    expect(res).to eq("2016-12-22-este-e-um-exemplo-de-stri")            
+  end
+
+  it 'SaneTitle::Sanifier.result_imp should return a string limited to lim and WITH .html at the end and prepended with timestamp' do
+    cl = SaneTitle::Sanifier.new("Este é um exemplo de string (teste) *&%$ que será corrigida no curso da programação!")
+    res = cl.result_imp(25,true,true)
+    expect(res).to eq("2016-12-22-este-e-um-exemplo-de-stri.html")
+  end      
   
 end

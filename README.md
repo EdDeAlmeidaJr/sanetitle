@@ -46,16 +46,17 @@ and then store the sane string in a variable with
 
 In this particular case, the variable sane_title shall contain "este-e-um-exemplo-de-string-que-sera-corrigida-no-curso-da-programacao".
 
-From release 0.2.0 on, one may also call
+From release 0.3.0 on, one may also call
 
 ```ruby
-    sane_title = obj.result_imp(<limit>,<html>)
+    sane_title = obj.result_imp(<limit>,<html>,<tstamp>)
 ```
 
 where:
 
 <limit> is an integer value used to require that the size of the result string is limited to this size, and
 <html> is a boolean value to require (true) or not (false) that the extension .html is appended to the result.
+<tstamp> is a boolean value to indicating if the result string must be prepended with a timestamp in the format "yyyy-mm-dd-hh-mm-ss-"
 
 Note two important things:
 
