@@ -44,13 +44,11 @@ module SaneTitle
         resimp = resimp + '.html'
       end
       if (tstamp) then
-        dt = DateTime.now.to_s 
-        dt.gsub!('T','-')
-        dt.gsub!(':','-')
-        arry = dt.split('-')
-        arry.pop(5)
-        dt = arry.join('-')
-        resimp = dt + '-' + resimp
+        dt = DateTime.now
+        yyyy = dt.year.to_s 
+        mm = (dt.month < 10) ? '0' + dt.month.to_s : dt.month.to_s
+        dd = (dt.day < 10) ? '0' + dt.day.to_s : dt.day.to_s 
+        resimp = "#{yyyy}-#{mm}-#{dd}-#{resimp}"
       end
       resimp
     end

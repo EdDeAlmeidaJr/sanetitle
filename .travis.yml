@@ -1,4 +1,4 @@
-sudo: required
+sudo: require
 language: ruby
 rvm:
   - 2.3.3
